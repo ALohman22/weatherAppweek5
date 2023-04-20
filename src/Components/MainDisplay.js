@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Overview from "./Overview";
 import Weather from './Weather'
 import Symbols from "./Symbols";
-// import { setIsLoading } from "../redux/slices/isLoadingSlice";
+import { setIsLoading } from "../redux/slices/isLoadingSlice";
 import { useDispatch } from 'react-redux'
 
 const MainDisplay = () => {
@@ -21,9 +21,9 @@ const MainDisplay = () => {
                     Current Weather at Capitol
                 </button>
                 <button onClick={() => {
-                    // dispatch(setIsLoading())
+                    dispatch(setIsLoading())
                     setView("Symbols")
-                    // dispatch(setIsLoading())
+                    dispatch(setIsLoading())
                     
                     }}>Symbols</button>
             </div>
